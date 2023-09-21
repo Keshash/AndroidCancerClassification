@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background"
+    >
+<!--    -->
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="400sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button2"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="2dp"
+        android:background="@drawable/button"
+        android:text="Сфотографувати"
+        android:textAllCaps="false"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#D6D3DD"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="Відкрити з галереї"
+        android:textAllCaps="false"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#D6D3DD"
+        android:background="@drawable/button"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="2dp"
+        android:radius="10dp"/>
+
+    <ImageView
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView"
+        android:cropToPadding="true"
+        android:padding="5sp"
+        android:layout_marginTop="10sp"
+        android:radius="10dp"
+        android:background="@drawable/image_uploaded"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Оберіть фото"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#D6D3DD"
+        android:id="@+id/classified"
+        android:layout_below="@+id/imageView"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/result"
+        android:layout_below="@+id/classified"
+        android:layout_margin="20sp"
+        />
+
+    <ListView
+        android:id="@+id/resultList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="false"
+        android:layout_below="@+id/result"
+        android:layout_above="@id/button"
+        />
+
+
+
+</RelativeLayout>
